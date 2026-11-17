@@ -8,7 +8,7 @@
 <meta property="og:title" content="ChickCount — إدارة مزرعة الدواجن بذكاء">
 <meta property="og:description" content="سجّل يومك، تابع أرباحك، راجع الشيت، وتواصل مع عمالك. كل مزرعتك في تطبيق واحد.">
 <meta property="og:image" content="screenshots/home.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M13.1 6.1c.2-2.1 1.9-3.7 4-3.9-.1 2.2-1.8 4-3.9 4.2' fill='%232FBF71'/%3E%3Ccircle cx='12' cy='14' r='7.6' fill='%23F0CC6E'/%3E%3Cpath d='M9.6 13.9 13.9 12.5v3.2L9.6 14.4Z' fill='%23E8930C'/%3E%3Ccircle cx='10.3' cy='12.2' r='1.05' fill='%23231A04'/%3E%3C/svg%3E">
+<link rel="icon" href="icons/app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@ body{
 
 /* ====== أيقونات SVG ====== */
 .ic{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.logo .mark svg{width:26px;height:26px;display:block}
+.logo .mark img{width:100%;height:100%;object-fit:cover;display:block}
 .chip svg{width:15px;height:15px;color:var(--green);flex:0 0 auto}
 .feat .icon svg{width:26px;height:26px}
 .float-card .ic svg{width:20px;height:20px}
@@ -58,8 +58,7 @@ nav{
 }
 nav.scrolled{box-shadow:0 10px 40px rgba(0,0,0,.45)}
 .logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:21px;letter-spacing:.3px;text-decoration:none;color:var(--text)}
-.logo .mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;
-  background:linear-gradient(135deg,rgba(61,220,132,.22),rgba(240,204,110,.18));border:1px solid var(--stroke2)}
+.logo .mark{width:44px;height:44px;border-radius:14px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,.45)}
 .logo b{color:var(--green)}
 .navlinks{display:flex;gap:30px}
 .navlinks a{color:var(--muted);text-decoration:none;font-weight:700;font-size:15px;transition:color .2s}
@@ -232,7 +231,7 @@ footer .links a:hover{color:var(--green)}
 
 <!-- ═══════════ النافبار ═══════════ -->
 <nav id="nav">
-  <a class="logo" href="#top"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M13.1 6.1c.2-2.1 1.9-3.7 4-3.9-.1 2.2-1.8 4-3.9 4.2" fill="#2FBF71"/><circle cx="12" cy="14" r="7.6" fill="#F0CC6E"/><path d="M9.6 13.9 13.9 12.5v3.2L9.6 14.4Z" fill="#E8930C"/><circle cx="10.3" cy="12.2" r="1.05" fill="#231A04"/></svg></span>Chick<b>Count</b></a>
+  <a class="logo" href="#top"><span class="mark"><img src="icons/app-icon.png" alt="أيقونة ChickCount"></span>Chick<b>Count</b></a>
   <div class="navlinks">
     <a href="#features">المميزات</a>
     <a href="#shots">لقطات من التطبيق</a>
@@ -245,7 +244,7 @@ footer .links a:hover{color:var(--green)}
 <header class="wrap hero" id="top">
   <div>
     <div class="badge reveal"><span class="dot"></span> الإصدار 2.6 · لأجهزة أندرويد</div>
-    <h1 class="reveal d1">مزرعتك كلها…<br>في <span class="grad">تطبيق واحد</span></h1>
+    <h1 class="reveal d1">حسابك كلو…<br>في <span class="grad">تطبيق واحد</span></h1>
     <p class="lead reveal d2">
       سجّل أعداد الكتاكيت يوم بيوم، تابع الأسعار والأرباح، راجع الشيت قبل القفل،
       وتواصل مع فريقك برسايل صوتية — بأسلوب بسيط وتصميم يحبه القلب.
@@ -391,7 +390,7 @@ footer .links a:hover{color:var(--green)}
 
 <!-- ═══════════ الفوتر ═══════════ -->
 <footer>
-  <a class="logo" href="#top"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M13.1 6.1c.2-2.1 1.9-3.7 4-3.9-.1 2.2-1.8 4-3.9 4.2" fill="#2FBF71"/><circle cx="12" cy="14" r="7.6" fill="#F0CC6E"/><path d="M9.6 13.9 13.9 12.5v3.2L9.6 14.4Z" fill="#E8930C"/><circle cx="10.3" cy="12.2" r="1.05" fill="#231A04"/></svg></span>Chick<b>Count</b></a>
+  <a class="logo" href="#top"><span class="mark"><img src="icons/app-icon.png" alt="أيقونة ChickCount"></span>Chick<b>Count</b></a>
   <p>إدارة مزارع الدواجن بذكاء — صُنع بحب في مصر</p>
   <div class="links">
     <a href="#features">المميزات</a>
