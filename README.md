@@ -1,28 +1,32 @@
-# صفحة ويب ChickCount 🐤
+# صفحة ويب ChickCount
 
 صفحة هبوط احترافية للتطبيق — ملف واحد `index.html` + فولدر `screenshots/` فيه لقطات التطبيق.
 
-## ١) خطوة إلزامية: رابط تحميل الـ APK
+## الموقع المنشور
 
-افتح `index.html` ودوّر على أول جزء في الجافاسكريبت (آخر الملف تقريبًا):
+- **رابط الموقع:** https://mosalem-dev.github.io/chickcount-site/
+- **الريبو:** https://github.com/mosalem-dev/chickcount-site
+- **رابط الـ APK المباشر:** https://github.com/mosalem-dev/chickcount-site/releases/latest/download/ChickCount.apk
+- ملف الـ APK مرفوع على **GitHub Releases** (مش جوه الريبو — GitHub بيرفض ملفات فوق 100MB في الريبو، والـ Releases بيقبل حتى 2GB).
 
-```js
-const APK_URL = "ضع-رابط-الـAPK-هنا";
-```
+## تحديث جديد (APK أو الصفحة)
 
-- ارفع ملف الـ APK على **Google Drive** (خليه Public) أو **GitHub Releases** أو أي موقع.
-- خُد الرابط المباشر وحطه مكان النص ده.
-- من غيره الزرار هيفضّل يعرض رسالة تنبيه لحد ما تحطه.
+1. **APK جديد:** انسخه مكان `web\ChickCount.apk` وبعدين:
+   ```
+   gh release upload v2.6 "web\ChickCount.apk" --repo mosalem-dev/chickcount-site --clobber
+   ```
+   الرابط المباشر مش بيتغير أبدًا — نفس اللينك يفضل شغال.
+2. **تعديل الصفحة أو اللقطات:** عدّل `index.html` أو استبدل صور `screenshots/` بنفس الأسماء، وبعدين:
+   ```
+   git add -A; git commit -m "update"; git push
+   ```
+   Pages هتبني لوحدها خلال دقيقة.
 
-## ٢) الاستضافة (مجانًا)
+## خطوات التثبيت عند المستخدم
 
-الأسهل: **Netlify Drop** — افتح https://app.netlify.com/drop واسحب فولدر `web` كله — يديك لينك فوري.
+نزّل الـ APK → اسمح بـ«مصادر غير معروفة» لو الجهاز سأل → افتح وابدأ.
 
-بدائل: GitHub Pages، Vercel، Cloudflare Pages (نفس الفكرة: ارفع الفولدر كله).
+## ملاحظات
 
-## ٣) تحديث اللقطات
-
-استبدل الصور في `screenshots/` بنفس الأسماء:
-`home.png` · `report.png` · `review.png` · `chat.png` · `quran.png`
-
-> ملاحظة: اللقطات دي فيها بيانات واسم وصور حقيقية — لو هتنشر الصفحة للعموم قيّم ده الأول.
+- اللقطات دي فيها بيانات واسم وصور حقيقية — لو عايز تعتيم قبل نشر أوسع، استبدلها.
+- إيموجي: ممنوع في الصفحة — كل الأيقونات SVG (ستايل Lucide/Feather).
