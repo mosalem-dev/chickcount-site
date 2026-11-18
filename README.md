@@ -13,9 +13,9 @@
 
 1. **APK جديد:** انسخه مكان `web\ChickCount.apk` وبعدين:
    ```
-   gh release create v2.7 "web\ChickCount.apk" --repo mosalem-dev/chickcount-site --title "ChickCount v2.7" --notes "لا شيت — كل الأرقام من أيام المزرعة المقفولة"
+   gh release create v2.9 "web\ChickCount.apk" --repo mosalem-dev/chickcount-site --title "ChickCount v2.9" --notes "لا شيت — كل الأرقام من أيام المزرعة المقفولة"
    ```
-   أو لو الريليز موجود: `gh release upload v2.7 "web\ChickCount.apk" --repo mosalem-dev/chickcount-site --clobber`
+   أو لو الريليز موجود: `gh release upload v2.9 "web\ChickCount.apk" --repo mosalem-dev/chickcount-site --clobber`
    الرابط المباشر مش بيتغير أبدًا — نفس اللينك يفضل شغال.
 2. **تعديل الصفحة أو اللقطات:** عدّل `index.html` أو استبدل صور `screenshots/` بنفس الأسماء، وبعدين:
    ```
